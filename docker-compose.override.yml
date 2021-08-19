@@ -1,0 +1,37 @@
+version: "3"
+services:
+  redis:
+    networks:
+      outline_net:
+        ipv4_address: 172.16.238.10
+  postgres:
+    ports:
+      - "5532:5432"
+    networks:
+      outline_net:
+        ipv4_address: 172.16.238.11
+  s3:
+    networks:
+      outline_net:
+        ipv4_address: 172.16.238.12
+  outline:
+    image: outline:v001
+    command: sh
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    networks:
+      outline_net:
+        ipv4_address: 172.16.238.13
+
+networks:
+  outline_net:
+    driver: bridge
+    name: outline_net
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.238.0/24
+          gateway: 172.16.238.1
