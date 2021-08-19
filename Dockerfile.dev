@@ -1,0 +1,10 @@
+ARG APP_PATH=/opt/outline
+FROM node:16-alpine
+
+ARG APP_PATH
+RUN mkdir -p $APP_PATH
+WORKDIR $APP_PATH
+
+CMD sh
+EXPOSE 3000
+# CMD ["yarn", "start"]
