@@ -98,7 +98,7 @@ export const LabelText = styled.div`
 `;
 
 export type Props = React.HTMLAttributes<HTMLInputElement> & {
-  type?: "text" | "email" | "checkbox" | "search" | "textarea";
+  type?: "text" | "email" | "checkbox" | "search" | "textarea" | "password";
   value?: string;
   label?: string;
   className?: string;
