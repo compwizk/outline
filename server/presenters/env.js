@@ -20,5 +20,9 @@ export default function present(env: Object): Object {
     EMAIL_ENABLED: !!env.SMTP_USERNAME || env.NODE_ENV === "development",
     GOOGLE_ANALYTICS_ID: env.GOOGLE_ANALYTICS_ID,
     RELEASE: env.SOURCE_COMMIT || env.SOURCE_VERSION || undefined,
+
+    HELPER_GITHUB_ISSUES_URL: env.HELPER_GITHUB_ISSUES_URL,
+    HELPER_MAILTO: env.HELPER_MAILTO,
+    HELPER_CHANGELOG: env.HELPER_CHANGELOG,
   };
 }

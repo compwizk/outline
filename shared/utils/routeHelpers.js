@@ -1,4 +1,5 @@
 // @flow
+const env = typeof window !== "undefined" ? window.env : process.env;
 
 export function slackAuth(
   state: string,
@@ -31,7 +32,7 @@ export function githubUrl(): string {
 }
 
 export function githubIssuesUrl(): string {
-  return "https://www.github.com/outline/outline/issues";
+  return !!env.HELPER_GITHUB_ISSUES_URL?env.HELPER_GITHUB_ISSUES_URL:"https://www.github.com/outline/outline/issues";
 }
 
 export function twitterUrl(): string {
@@ -39,7 +40,7 @@ export function twitterUrl(): string {
 }
 
 export function mailToUrl(): string {
-  return "mailto:hello@getoutline.com";
+  return !!env.HELPER_MAILTO?("mailto:"+env.HELPER_MAILTO):"mailto:hello@getoutline.com";
 }
 
 export function developersUrl(): string {
@@ -47,7 +48,7 @@ export function developersUrl(): string {
 }
 
 export function changelogUrl(): string {
-  return `https://www.getoutline.com/changelog`;
+  return !!env.HELPER_CHANGELOG?env.HELPER_CHANGELOG:`https://www.getoutline.com/changelog`;
 }
 
 export function signin(service: string = "slack"): string {

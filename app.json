@@ -155,6 +155,18 @@
     "TEAM_LOGO": {
       "description": "A logo that will be displayed on the signed out home page",
       "required": false
+    },
+    "HELPER_GITHUB_ISSUES_URL": {
+        "description": "Custom issue reporting URL",
+        "required": false
+    },
+    "HELPER_MAILTO": {
+      "description": "Custom feedback email(s)",
+      "required": false
+    },
+    "HELPER_CHANGELOG": {
+      "description": "Custom changelog URL",
+      "required": false
     }
   }
 }
