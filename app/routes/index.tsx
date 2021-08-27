@@ -26,6 +26,13 @@ const SharedDocument = React.lazy(
       "~/scenes/Document/Shared"
     )
 );
+const LoginPrompt = React.lazy(
+  () =>
+    import(
+      /* webpackChunkName: "login-prompt" */
+      "~/scenes/LoginPrompt"
+    )
+);
 const Login = React.lazy(
   () =>
     import(
@@ -52,6 +59,7 @@ export default function Routes() {
     >
       <Switch>
         <Route exact path="/" component={Login} />
+        <Route exact path="/login/prompt" component={LoginPrompt} />
         <Route exact path="/create" component={Login} />
         <Route exact path="/logout" component={Logout} />
 
