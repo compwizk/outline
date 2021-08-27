@@ -9,15 +9,26 @@ This readme contains notes and changes separate from upstream Outline.
 1. Follow the `Makefile` `up` commands:
 	```
 	# Only needed the first time or if package dependencies are changed
-	yarn install --mode update-lockfile
+	yarn install --pure-lockfile
 	# Must be run every time the _container stack_ is restarted (or the DB reset)
 	yarn sequelize db:migrate
 	# Ensure the .env file exists and then start the hot reloading development server (http://localhost:3000)
-	yarn dev
+	yarn dev:watch
 	```
 
 > The `.env.dev` file has the current configuration template that can be used for development. This should NOT be used in production.
 
+## Releases
+
+1. Tag appropriate commit corresponding to upstream release
+1. Apply any out-of-tree patches as necessary (squashing is okay here)
+1. Cherry-pick changes from `compwizk-dev`
+	1. The `yarn.lock` file may need to be regenerated separately with `yarn install --mode update-lockfile`
+1. Run through functional tests
+	1. LDAP authentication
+	1. Email link absense (or presence)
+	1. Account menu links
+1. Tag release as `<original_tag>-ldap`
 
 ## Configuration changes
 
