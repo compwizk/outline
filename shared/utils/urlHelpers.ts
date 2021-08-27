@@ -29,7 +29,7 @@ export function githubUrl(): string {
 }
 
 export function githubIssuesUrl(): string {
-  return "https://www.github.com/outline/outline/issues";
+  return !!env.HELPER_GITHUB_ISSUES_URL?env.HELPER_GITHUB_ISSUES_URL:"https://www.github.com/outline/outline/issues";
 }
 
 export function twitterUrl(): string {
@@ -37,7 +37,7 @@ export function twitterUrl(): string {
 }
 
 export function feedbackUrl(): string {
-  return "https://www.getoutline.com/contact";
+  return !!env.HELPER_MAILTO?("mailto:"+env.HELPER_MAILTO):"https://www.getoutline.com/contact";
 }
 
 export function developersUrl(): string {
@@ -45,7 +45,7 @@ export function developersUrl(): string {
 }
 
 export function changelogUrl(): string {
-  return "https://www.getoutline.com/changelog";
+  return !!env.HELPER_CHANGELOG?env.HELPER_CHANGELOG:"https://www.getoutline.com/changelog";
 }
 
 export function signin(service = "slack"): string {
