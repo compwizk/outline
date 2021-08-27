@@ -18,6 +18,16 @@ This readme contains notes and changes separate from upstream Outline.
 
 > The `.env.dev` file has the current configuration template that can be used for development. This should NOT be used in production.
 
+## Releases
+
+1. Tag appropriate commit corresponding to upstream release
+1. Apply any out-of-tree patches as necessary (squashing is okay here)
+1. Cherry-pick changes from `compwizk-dev`
+1. Run through functional tests
+	1. LDAP authentication
+	1. Email link absense (or presence)
+	1. Account menu links
+1. Tag release as `<original_tag>-ldap`
 
 ## Configuration changes
 
