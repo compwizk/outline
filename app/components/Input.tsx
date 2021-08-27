@@ -107,7 +107,7 @@ export const LabelText = styled.div`
 export type Props = React.InputHTMLAttributes<
   HTMLInputElement | HTMLTextAreaElement
 > & {
-  type?: "text" | "email" | "checkbox" | "search" | "textarea";
+  type?: "text" | "email" | "checkbox" | "search" | "textarea" | "password";
   labelHidden?: boolean;
   label?: string;
   flex?: boolean;
