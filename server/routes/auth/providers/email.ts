@@ -19,7 +19,7 @@ const router = new Router();
 
 export const config = {
   name: "Email",
-  enabled: true,
+  enabled: process.env.ALLOW_EMAIL_LOGIN === "false"?false:true,
 };
 
 router.use(methodOverride());
