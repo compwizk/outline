@@ -203,6 +203,18 @@
       "value": "en_US",
       "description": "The default interface language. See translate.getoutline.com for a list of available language codes and their rough percentage translated.",
       "required": false
+    },
+    "HELPER_GITHUB_ISSUES_URL": {
+        "description": "Custom issue reporting URL",
+        "required": false
+    },
+    "HELPER_MAILTO": {
+      "description": "Custom feedback email(s)",
+      "required": false
+    },
+    "HELPER_CHANGELOG": {
+      "description": "Custom changelog URL",
+      "required": false
     }
   }
 }
