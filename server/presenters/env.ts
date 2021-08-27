@@ -25,5 +25,9 @@ export default function present(env: Environment): PublicEnv {
     GOOGLE_ANALYTICS_ID: env.GOOGLE_ANALYTICS_ID,
     RELEASE:
       process.env.SOURCE_COMMIT || process.env.SOURCE_VERSION || undefined,
+
+    HELPER_GITHUB_ISSUES_URL: env.HELPER_GITHUB_ISSUES_URL,
+    HELPER_MAILTO: env.HELPER_MAILTO,
+    HELPER_CHANGELOG: env.HELPER_CHANGELOG,
   };
 }
