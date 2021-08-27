@@ -153,3 +153,11 @@ export function AuthenticationProviderDisabledError(
     id: "authentication_provider_disabled",
   });
 }
+
+export function LdapLookupError(
+  message = "LDAP lookup did not return all required fields"
+) {
+  return httpErrors(400, message, {
+    id: "ldap_lookup_error",
+  });
+}
