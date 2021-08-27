@@ -89,7 +89,7 @@ export const LabelText = styled.div`
 `;
 
 export type Props = {|
-  type?: "text" | "email" | "checkbox" | "search" | "textarea",
+  type?: "text" | "email" | "checkbox" | "search" | "textarea" | "password",
   value?: string,
   label?: string,
   className?: string,

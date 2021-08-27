@@ -20,6 +20,9 @@ const KeyedDocument = React.lazy(() =>
 const Login = React.lazy(() =>
   import(/* webpackChunkName: "login" */ "scenes/Login")
 );
+const LoginPrompt = React.lazy(() =>
+  import(/* webpackChunkName: "login-prompt" */ "scenes/LoginPrompt")
+);
 const Logout = React.lazy(() =>
   import(/* webpackChunkName: "logout" */ "scenes/Logout")
 );
@@ -35,6 +38,7 @@ export default function Routes() {
     >
       <Switch>
         <Route exact path="/" component={Login} />
+        <Route exact path="/login/prompt" component={LoginPrompt} />
         <Route exact path="/create" component={Login} />
         <Route exact path="/logout" component={Logout} />
         <Route exact path="/share/:shareId" component={KeyedDocument} />
