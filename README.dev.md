@@ -31,6 +31,8 @@ This readme contains notes and changes separate from upstream Outline.
 | LDAP_DEFAULT_TEAM_DOMAIN    | Instance team domain                   |                                               | example               |
 | LDAP_DEFAULT_TEAM_SUBDOMAIN | Instance team subdomain                |                                               | myteam                |
 | LDAP_USER_DISPLAY_NAME      | DIT user display name key              | uid                                           | displayName           |
+|                             |                                        |                                               |                       |
+| ALLOW_EMAIL_LOGIN           | Allow email token based login          |                                               | true                  |
 
 
 ## LDAP Limitations
