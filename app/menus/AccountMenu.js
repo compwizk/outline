@@ -22,6 +22,7 @@ import Guide from "components/Guide";
 import useBoolean from "hooks/useBoolean";
 import usePrevious from "hooks/usePrevious";
 import useStores from "hooks/useStores";
+import env from "env";
 
 type Props = {|
   children: (props: any) => React.Node,
@@ -113,13 +114,13 @@ function AccountMenu(props: Props) {
           {t("API documentation")}
         </MenuItem>
         <Separator {...menu} />
-        <MenuItem {...menu} href={changelog()} target="_blank">
+        <MenuItem {...menu} href={env.HELPER_CHANGELOG || changelog()} target="_blank">
           {t("Changelog")}
         </MenuItem>
-        <MenuItem {...menu} href={mailToUrl()} target="_blank">
+        <MenuItem {...menu} href={!!env.HELPER_MAILTO?("mailto:"+env.HELPER_MAILTO):mailToUrl()} target="_blank">
           {t("Send us feedback")}
         </MenuItem>
-        <MenuItem {...menu} href={githubIssuesUrl()} target="_blank">
+        <MenuItem {...menu} href={env.HELPER_GITHUB_ISSUES_URL || githubIssuesUrl()} target="_blank">
           {t("Report a bug")}
         </MenuItem>
         <Separator {...menu} />

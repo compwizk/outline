@@ -33,6 +33,10 @@ This readme contains notes and changes separate from upstream Outline.
 | LDAP_USER_DISPLAY_NAME      | DIT user display name key              | uid                                           | displayName           |
 |                             |                                        |                                               |                       |
 | ALLOW_EMAIL_LOGIN           | Allow email token based login          |                                               | true                  |
+|                             |                                        |                                               |                       |
+| HELPER_GITHUB_ISSUES_URL    | Custom link for AccountMenu(Bug)       | https://www.github.com/outline/outline/issues |                       |
+| HELPER_MAILTO               | Custom link for AccountMenu(Feedback)  | hello@getoutline.com                          |                       |
+| HELPER_CHANGELOG            | Custom link for AccountMenu(Changelog) | https://www.getoutline.com/changelog          |                       |
 
 
 ## LDAP Limitations

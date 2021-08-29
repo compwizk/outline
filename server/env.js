@@ -15,4 +15,8 @@ export default {
   SUBDOMAINS_ENABLED: process.env.SUBDOMAINS_ENABLED === "true",
   GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
   RELEASE: process.env.SOURCE_COMMIT || process.env.SOURCE_VERSION || undefined,
+
+  HELPER_GITHUB_ISSUES_URL: process.env.HELPER_GITHUB_ISSUES_URL,
+  HELPER_MAILTO: process.env.HELPER_MAILTO,
+  HELPER_CHANGELOG: process.env.HELPER_CHANGELOG,
 };
