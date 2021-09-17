@@ -73,15 +73,15 @@ function AccountMenu(props: Props) {
       },
       {
         title: t("Changelog"),
-        href: changelog(),
+        href: env.HELPER_CHANGELOG || changelog(),
       },
       {
         title: t("Send us feedback"),
-        href: mailToUrl(),
+        href: !!env.HELPER_MAILTO?("mailto:"+env.HELPER_MAILTO):mailToUrl(),
       },
       {
         title: t("Report a bug"),
-        href: githubIssuesUrl(),
+        href: env.HELPER_GITHUB_ISSUES_URL || githubIssuesUrl(),
       },
       {
         title: t("Appearance"),
