@@ -3260,10 +3260,10 @@
   resolved "https://registry.yarnpkg.com/@types/throng/-/throng-5.0.3.tgz#01fc3a0e507799d9744f00145f1e38f50f647a9b"
   integrity sha512-Pt8Bunl40PyFvIcQ5berMYXt0XT94hWI4+5J7Ojl/k9NU75zHJibHUt3oRjiloy4x1rPcX0UJyq+yBjkMmv8zQ==
 
-"@types/tmp@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.2.2.tgz#424537a3b91828cb26aaf697f21ae3cd1b69f7e7"
-  integrity sha512-MhSa0yylXtVMsyT8qFpHA1DLHj4DvQGH5ntxrhHSh8PxUVNi35Wk+P5hVgqbO2qZqOotqr9jaoPRL+iRjWYm/A==
+"@types/tmp@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.2.3.tgz#908bfb113419fd6a42273674c00994d40902c165"
+  integrity sha512-dDZH/tXzwjutnuk4UacGgFRwV+JSLaXL1ikvidfJprkb7L9Nx1njcRHHmi3Dsvt7pgqqTEeucQuOrWHPFgzVHA==
 
 "@types/tough-cookie@*":
   version "4.0.2"
